@@ -28,6 +28,15 @@ app.get('/post', (req, res) => {
   res.render('post')
 });
 
+app.get('/posts/new', (req, res) => {
+  res.render('create')
+});
+
+app.post('/posts/store', (req, res) => {
+  console.log(req.body)
+  res.redirect('/')
+});
+
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`)
 });
